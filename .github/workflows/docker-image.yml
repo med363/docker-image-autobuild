@@ -17,5 +17,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag mohamedamineblibech/docker-image-autobuild:latest
     - name: Push the Docker image
-      run: docker login -u ${{USERNAME}}  -p ${{PWD}} && docker push mohamedamineblibech/docker-image-autobuild:latest
+      run: docker login -u ${{vars.USERNAME}}  -p ${{vars.PWD}} && docker push mohamedamineblibech/docker-image-autobuild:latest
 
